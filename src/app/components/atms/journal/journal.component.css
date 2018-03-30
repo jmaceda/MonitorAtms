@@ -1,0 +1,111 @@
+/*
+.ngx-datatable.material.ngx-datatable.fixed-header.fixed-row.scroll-vertical.scroll-horz {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+datatable-header div div datatable-header-cell.datatable-header-cell.sortable.resizeable {
+    width: 300px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 34px;
+}
+
+ngx-datatable.ngx-datatable.fixed-header.datatable-header.datatable-header-inner.datatable-header-cell {
+    background-color: blue;
+}
+
+.datatable-header-cell {
+    background-color: green;
+}
+
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: gray;
+}
+
+.ngx-datatable.material .datatable-header {
+    background-color: green;
+}
+
+datatable-header-cell.datatable-header-cell.sortable.resizeable{
+    background-color: green;
+}
+
+.datatable-header-cell {
+    background-color: green;
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active, .ngx-datatable.material.single-selection .datatable-body-row.active .datatable-row-group, .ngx-datatable.material.multi-selection .datatable-body-row.active, .ngx-datatable.material.multi-selection .datatable-body-row.active .datatable-row-group, .ngx-datatable.material.multi-click-selection .datatable-body-row.active, .ngx-datatable.material.multi-click-selection .datatable-body-row.active .datatable-row-group {
+    height: 24px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+    border-right: 5px dotted red;
+}
+
+.ngx-datatable .datatable-header .datatable-header-cell {
+	background-color: #4D82B8;
+	color: white;
+	border-bottom: 5px;
+	border-color: #FCFCFC;
+}
+*/
+
+
+
+.clsContentDataTable {
+    padding: 2px; 
+    height: 65vh; 
+    background-color: #dfdfdf; 
+    box-shadow: 0 2.5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+ngx-datatable.material.striped.ngx-datatable.fixed-header.fixed-row.scroll-vertical.scroll-horz[_ngcontent-c2] {
+    margin-left: .5%;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    width: 99%;
+    max-width: 99%;
+}
+
+ngx-datatable.material.striped.ngx-datatable.fixed-header.fixed-row.scroll-vertical.scroll-horz {
+    margin-left: .5%;
+    margin-top: .5%;
+    margin-bottom: .5%;
+    width: 100%;
+    max-width: 99%;
+    height: 100%;
+    max-height: 99%;     
+}
+  
+ngx-datatable {
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+}
+
+div.visible {
+    border: 5px solid blue;
+}
+
+.datatable-body-row {
+   color: $dim-text-color;
+   border-bottom: 1px solid $active-background-color;
+   &:hover {
+      background-color: $app-dim-selection-color;
+   }
+   &.active {
+      color: $text-color;
+      background-color: $app-selection-color;
+   }
+}
+
+.retiroOk {
+	background-color: #8FE61D;
+}

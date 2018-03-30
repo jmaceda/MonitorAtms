@@ -1,0 +1,70 @@
+/* app/reportes/params/params.component.css */
+#idDivComboAtmGpo,
+#divFchHoraUltimaActual {
+    display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+}
+
+#idDivImgActualiza,
+#idDivImgFiltros {
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+}
+
+#idComboAtmGpo {
+    cursor: pointer;
+    max-width: 100%;
+    width: 100%
+}
+
+#idFchHraUltimaActual {
+    max-width: 100%;
+    width: 100%
+}
+
+#idComboAtmGpo {
+    height: 26px;
+}
+
+select#idComboAtmGpo {
+    height: 26px;
+    cursor: pointer;
+}
+
+.clsMatCard {
+    margin-top: 5vh;
+    max-height: 4em;
+    height: 4em;
+    max-width: 100%;        
+    width: 100%; 
+    vertical-align: middle;
+    background-color: #dfdfdf;
+    /*padding: 2px;*/
+    box-shadow: 0 3.5px 5px 0 rgba(0, 0, 0, 0.24);
+    /*position: fixed;*/
+}
+
+.clsMatCardX {
+    margin-top: 5vh;
+    max-height: 10vh;
+    height: 10vh;
+    max-width: 100%;        
+    width: 100%; 
+    vertical-align: middle;
+    background-color: #dfdfdf;
+    /*padding: 2px;*/
+    box-shadow: 0 3.5px 5px 0 rgba(0, 0, 0, 0.24);
+    /*position: fixed;*/
+}
+
+.padre {
+    display: table;
+}
+
+.hijo {
+    display: table-cell;
+    vertical-align: middle;
+}
+    

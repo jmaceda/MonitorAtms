@@ -1,0 +1,167 @@
+<!-- app/reporfiltros-consultasrfiltros-consultasrams.component.html -->
+
+<style>
+
+    #idDivComboAtmGpo,
+    #divFchHoraUltimaActual {
+        display:table-cell;
+        vertical-align:middle;
+        text-align: center;
+    }
+
+    #idDivImgActualiza,
+    #idDivImgFiltros {
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #idComboAtmGpo {
+        cursor: pointer;
+        max-width: 100%;
+        width: 100%
+    }
+
+    #idFchHraUltimaActual {
+        max-width: 100%;
+        width: 100%
+    }
+
+    #idComboAtmGpo {
+        height: 26px;
+    }
+
+    select#idComboAtmGpo {
+        height: 26px;
+        cursor: pointer;
+    }
+
+	.example-card {
+		/*margin: .5%; */
+		margin-top: 5vh;
+		max-height: 18vh;
+		height: 18vh;
+		max-width: 100%; 		
+		width: 100%; 
+		vertical-align: middle;
+		background-color: #F3F3F4;
+		/*position: fixed;*/
+	}
+	
+	.padre {
+		display: table;
+	}
+	.hijo {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+</style>
+
+<!--
+<div class="mdc-layout-grid">
+	<div class="mdc-layout-grid__inner">
+		<div class="mdc-layout-grid__cell">X1</div>
+		<div class="mdc-layout-grid__cell">X2</div>
+		<div class="mdc-layout-grid__cell">X3</div>
+	</div>
+</div>
+-->
+
+<!-- div style="margin: .5% 0%; height: 75px; width: 100%; vertical-align: middle;" -->
+    <!-- div class="card" style="padding: 8px; border: solid;" -->
+<mat-card class="example-card">
+	<mat-card-content style="padding: 2px;">
+
+        <div class="row">
+
+            <div id="idDivImgFiltros" class="col-md-1">
+                <span>Filtros</span>
+                <input id="btnParams"
+                       title="Modifica filtros para la consulta"
+                       style="cursor: pointer;"
+                       type=image   
+					   src="assets/img/../img/volume-synsizer-settings-icon.png"
+                       width="40" 
+					   height="40" (click)="pActualizaParams()">
+            </div>
+
+            <div class="col-md-10">
+
+                <div class="row">
+
+                    <!-- div class="col-md-1"></div -->
+                    <!-- div *ngIf="dSolicitaFechasIni" id="idDivFechas" -->
+                    <div *ngIf="muestraDosFecha() == 'A'" id="idDivFechas1" style="vertical-align: middle;">
+                        <div class="col-md-4">
+								<input id="idFchRangoIni"
+									[owlDateTime]="dt1" 
+									[owlDateTimeTrigger]="dt1" placeholder="Date Time">
+								<owl-date-time #dt1></owl-date-time>
+								<!--
+                                <angular2-date-picker id="idFchRangoIni" title="Fecha y hora inicial para la consulta" *ngIf="dSolicitaFechasIni" [(ngModel)]="fchInicio" [settings]="settings"></angular2-date-picker>
+                                <angular2-date-picker id="idFchRangoFin" title="Fecha y hora final para la consulta" *ngIf="dSolicitaFechasFin" [(ngModel)]="fchFin" [settings]="settings"></angular2-date-picker>
+								-->
+                        </div>
+                    </div>
+
+                    <div *ngIf="muestraDosFecha() == 'I'" id="idDivFechas">
+                        <div class="col-md-4">
+                            <div><br></div>
+							<input id="idFchRangoIni2"
+								[owlDateTime]="dt1" 
+								[owlDateTimeTrigger]="dt1" placeholder="Date Time">
+							<owl-date-time #dt1></owl-date-time>
+							<!--
+                            <angular2-date-picker id="idFchRangoIni2" title="Fecha y hora inicial para la consulta" *ngIf="dSolicitaFechasIni" [(ngModel)]="fchInicio" [settings]="settings"></angular2-date-picker>
+							-->
+                        </div>
+                    </div>
+
+                    <div *ngIf="!dSolicitaFechasIni">
+                        <div class="col-md-1"></div>
+                    </div>
+
+                    <div id="idDivComboAtmGpo" class="col-md-4">
+                        <span style="font-weight: bold;">{{contenidoCombo}}</span>
+                        <select id="idComboAtmGpo" type="string" 
+									[(ngModel)]="atmSeleccionado" 
+									(ngModelChange)="pAtmSeleccionado($event)">
+                            <option value="" disabled>{{contenidoLista}}</option>
+                            <option *ngFor="let atm of ipATMs; let i = index" [ngValue]="atm">{{atm}}</option>
+                        </select>
+                    </div>
+
+                    <div *ngIf="!dSolicitaFechasIni">
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div *ngIf="dSolicitaFechasIni">
+                        <div class="col-md-1"></div>
+                    </div>
+
+                    <div id="divFchHoraUltimaActual" class="col-md-4">
+                            <span style="font-weight: bold;">Última Actualización</span>
+                            <input  id="idFchHraUltimaActual"   style="text-align: center;"
+                                    title="Fecha y hora de la última actualización"
+                                    type="text" name="dUltimaActualizacion" disabled>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="idDivImgActualiza" class="col-md-1">
+                    <span>Actualiza</span>
+                    <input id="btnRefreshJournal"
+                           style="cursor: pointer;"
+                           title="Actualiza información del servidor"
+                           type=image   src="assets/img/../img/refresh--database-icon-40430.png"
+                           width="40" height="40" (click)="pActualizaInfo()">
+            </div>
+        </div>
+	</mat-card-content>
+    <!-- /div -->
+</mat-card>
+<!-- /div -->
+

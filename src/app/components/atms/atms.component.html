@@ -1,0 +1,8 @@
+<mat-toolbar color="primary" class="fijaSubMenu">
+	<div fxShow="true" fxHide.lt-md="true">
+		<a [routerLink]="['/atms/journal']">Journal</a>
+		<a [routerLink]="['/atms/loghard']">Log Hardwaer</a>
+	</div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,149 @@
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+
+
+/* Atributos del Area del menu vertical */
+
+.example-container {
+    margin-top: 64px;
+    width: 16.5em;
+    max-width: 16.5em;
+    height: 90.7vh;
+    max-height: 90.7vh;
+    border: 0px solid rgba(0, 0, 0, 0.5);
+}
+
+
+/* Area en al que se muestra el menu vertical (sidenav) */
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    width: 16em;
+    max-width: 16em;
+    height: 100%;
+    max-height: 100%;
+    align-items: right;
+    justify-content: right;
+}
+
+
+/* Menu vertical al abrirse */
+
+.example-sidenav {
+    background: black;
+    width: 15em;
+    max-width: 15em;
+    height: 100%;
+    max-height: 100%;
+    padding: 0px;
+}
+
+
+/* Atributos para los btones */
+
+.mat-button,
+.mat-flat-button,
+.mat-icon-button,
+.mat-stroked-button {
+    text-align: left;
+    padding-top: 0px;
+    padding-left: 16px;
+    /*line-height: 16px;*/
+}
+
+
+
+
+.attrIconoBarras {
+    color: #FFFFFF;
+    width: 8;
+    height: 8;
+}
+
+.abreMenuVertical {
+    padding-top: 250px;
+    color: black;
+    font-size: 24px;
+    width: 12;
+    height: 12;
+}
+
+.cierraMenuVertical {
+    /*
+padding-top: 500px;
+padding-left: 250px;
+*/
+    color: black;
+    font-size: 24px;
+    width: 12;
+    height: 12;
+}
+
+
+
+
+
+
+
+
+
+/* =============================================================================== */
+/* Efectos para los botones al pasar el mouse sobre de este */
+
+
+/* Reglas de parte superior de la pantalla */
+.fijaEncabezado {
+    background: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6em;
+    min-height: 5em;
+    max-height: 5em;
+    z-index: 999;
+    box-shadow: 0 2px 5px 0 #FFFFFF;
+    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);*/
+}
+
+
+/* Reglas de la barra del Sub Menús */
+.fijaSubMenu {
+    background: #F1EDED;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    max-height: 2em;
+    min-height: 2em;
+    z-index: 999;
+    margin-top: 5.1em;
+    box-shadow: 0 3.5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+A:hover {
+    text-decoration: none;
+    /*esto quita el subrayado*/
+    color: #00FFFF;
+    /*se sobreentiende*/
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Color de la letra de las ligas */
+a {
+    color: white;
+    font-size: 16px;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 12vh;
+}

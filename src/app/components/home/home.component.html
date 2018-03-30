@@ -1,0 +1,29 @@
+<style>
+
+</style>
+
+<div id="idHeaderPagina" style="height: 13vh;">
+
+    <mat-toolbar color="primary" class="fijaEncabezado">
+
+        <!-- span>Responsive Navigation</span -->
+        <img src="../assets/img/LogoManager-3.png" alt="Esto es una imagen insertada en html">
+
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+		
+        <div fxShow="true" fxHide.lt-md="true">
+
+            <a [routerLink]="['/']">Inicio</a>
+            <span class="example-spacer"></span>
+            <a [routerLink]="['/cursos']">Contacto</a>
+            <a [routerLink]="['/admin']">Admin</a>
+            <a [routerLink]="['/atms']">Atms</a>
+
+        </div>
+		
+    </mat-toolbar>
+	
+	<div class="fijaSubMenu"></div>
+	
+</div>

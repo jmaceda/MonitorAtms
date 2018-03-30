@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" class="fijaSubMenu">
+	<div fxShow="true" fxHide.lt-md="true">
+		<a [routerLink]="['/admin/new']">Inicio</a>
+		<a [routerLink]="['/admin/edit', 132143]">Modificar</a>
+		<a [routerLink]="['/admin/view']">Mostrar</a>
+	</div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

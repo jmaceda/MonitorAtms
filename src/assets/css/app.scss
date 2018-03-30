@@ -1,0 +1,57 @@
+@import '../../../node_modules/@swimlane/ngx-datatable/release/index.css';
+@import '../../../node_modules/@swimlane/ngx-datatable/release/themes/material.css';
+@import '../../../node_modules/@swimlane/ngx-datatable/release/assets/icons.css';
+
+
+.ngx-datatable {
+  .datatable-body {
+    $myProgressBarHeight: 5px;
+    $myTransitionDuratrion: .15s;
+    .progress-linear {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: $myProgressBarHeight;
+      padding: 0;
+      margin: 0 0 $myProgressBarHeight 0;
+      position: absolute;
+      .container {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: $myProgressBarHeight;
+        -webkit-transform: translate(0, 0) scale(1, 1);
+        transform: translate(0, 0) scale(1, 1);
+        background-color: mat-color($primary, lighter);
+        .bar {
+          transition: all $myTransitionDuratrion linear;
+          -webkit-animation: query 0.5s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+          animation: query 0.5s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition: -webkit-transform $myTransitionDuratrion linear;
+          transition: transform $myTransitionDuratrion linear;
+          background-color: mat-color($primary);
+          position: fixed;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          height: $myProgressBarHeight;
+        }
+      }
+    }
+  }
+}
+/**
+ * Progress bar animations
+ */
+@keyframes query {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) scale(0, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(35%) scale(0.3, 1);
+  }
+}
