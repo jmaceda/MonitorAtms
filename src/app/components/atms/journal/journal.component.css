@@ -59,9 +59,9 @@ datatable-header-cell.datatable-header-cell.sortable.resizeable{
 
 
 .clsContentDataTable {
-    padding: 2px; 
-    height: 65vh; 
-    background-color: #dfdfdf; 
+    padding: 2px;
+    height: 65vh;
+    background-color: #dfdfdf;
     box-shadow: 0 2.5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -81,9 +81,9 @@ ngx-datatable.material.striped.ngx-datatable.fixed-header.fixed-row.scroll-verti
     width: 100%;
     max-width: 99%;
     height: 100%;
-    max-height: 99%;     
+    max-height: 99%;
 }
-  
+
 ngx-datatable {
     width: 100%;
     max-width: 100%;
@@ -94,17 +94,19 @@ div.visible {
     border: 5px solid blue;
 }
 
+/*
 .datatable-body-row {
    color: $dim-text-color;
    border-bottom: 1px solid $active-background-color;
    &:hover {
       background-color: $app-dim-selection-color;
-   }
+   };
    &.active {
       color: $text-color;
       background-color: $app-selection-color;
-   }
+   };
 }
+*/
 
 .retiroOk {
 	background-color: #8FE61D;

@@ -1,6 +1,6 @@
 import { Component } 			from "@angular/core";
 import { OnInit } 				from "@angular/core";
-import { Input}                             from '@angular/core';
+import { Input}           from '@angular/core';
 import * as moment 				from "moment";
 
 import { MatToolbarModule } 		  from "@angular/material";
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   tomorrow = moment()
     .add(1, "days")
     .format();
-	
+
   constructor() {
     console.log("HomeComponent.constructor:: inicio");
   }

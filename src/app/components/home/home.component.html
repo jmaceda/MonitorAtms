@@ -2,16 +2,16 @@
 
 </style>
 
-<div id="idHeaderPagina" style="height: 13vh;">
+<div id="idHeaderPagina" class="fijaEncabezado">
 
-    <mat-toolbar color="primary" class="fijaEncabezado">
+    <mat-toolbar color="primary">
 
         <!-- span>Responsive Navigation</span -->
         <img src="../assets/img/LogoManager-3.png" alt="Esto es una imagen insertada en html">
 
         <span class="example-spacer"></span>
         <span class="example-spacer"></span>
-		
+
         <div fxShow="true" fxHide.lt-md="true">
 
             <a [routerLink]="['/']">Inicio</a>
@@ -21,9 +21,11 @@
             <a [routerLink]="['/atms']">Atms</a>
 
         </div>
-		
+
     </mat-toolbar>
-	
-	<div class="fijaSubMenu"></div>
-	
+
+    <router-outlet name="app-atms"></router-outlet>
+    <!-- router-outlet name="app-atms" class="fijaSubMenu"></router-outlet -->
+
+
 </div>

@@ -8,11 +8,12 @@ import { AdminViewComponent } from './../../components/admin-view/admin-view.com
 
 const routes: Routes = [
     {
-        path: 'admin', component: AdminComponent, children: [
-            { path: 'new', component: AdminNewComponent },
-            { path: 'edit/:id', component: AdminEditComponent },
-            { path: 'view', component: AdminViewComponent }
-        ]
+        path: 'admin', component: AdminComponent,
+            children: [
+                { path: 'new', component: AdminNewComponent },
+                { path: 'edit/:id', component: AdminEditComponent },
+                { path: 'view', component: AdminViewComponent }
+            ]
     }
 ];
 
@@ -21,8 +22,8 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [],
   declarations: [
-	  AdminNewComponent, 
-	  AdminEditComponent, 
+	  AdminNewComponent,
+	  AdminEditComponent,
 	  AdminViewComponent
   ]
 })

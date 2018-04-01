@@ -50,7 +50,7 @@ export class InfoAtmsService implements OnInit {
 
 		if ( gDatosAtms.length == 0){
 			// Obtiene los datos de los ATMs
-			this._soapService.post('', "GetAtm", parameters, this.GetAtm, false);
+			this._soapService.post('', "GetAtm", parameters, this.GetAtm, true);
 		}
 
         let idx = 0;

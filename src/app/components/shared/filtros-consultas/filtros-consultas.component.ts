@@ -28,7 +28,7 @@ import * as $ from 'jquery';
 export var datosATMs = [];
 export var ipATMs    = [];
 
-var nomModulo = "ParamsComponent";
+var nomModulo = "FiltrosConsultasComponent";
 
 
 @Component({
@@ -46,10 +46,8 @@ export class FiltrosConsultasComponent implements OnInit {
     @Input() dSolicitaFechasFin  : any;     // Indica se mostrara el combo para solicitar la fecha final o no (true=Si /false=No)
     @Output() parametrosConsulta = new EventEmitter();  // Función del Componente Padre que será ejecutada al oprimir el bototon "Actualiza".
 
-	
+    public dt1:any;
 
-	public dt1:any;
-	
     //@ViewChild('myModal')
     //modal: BsModalComponent;
     settings = {
@@ -95,6 +93,7 @@ export class FiltrosConsultasComponent implements OnInit {
                 this.ipATMs.push(reg.Description);
             });
 
+            console.log("nomModulo.ngOnInit::  -->"+JSON.stringify(this.gListaGpos)+"<--");
             console.log("--> " + this.ipATMs + "<--");
             this.contenidoLista = "Seleccione Grupo";
         } else if (this.ipATMs.length == 0) {
@@ -180,9 +179,9 @@ export class FiltrosConsultasComponent implements OnInit {
         }
     }
 
-  
+
     pActualizaParams(){
-      
+
     }
     /*
 

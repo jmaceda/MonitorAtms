@@ -108,7 +108,7 @@ table.table.table-condensed.table-bordered.data-table tbody tr td {
     padding-right: 2px;
 }
 
-/* Icono para el botón de Excel */
+/* Icono para el botÃ³n de Excel */
 .botonExpExcel {
     display: block;
     width: 90px;
@@ -120,7 +120,7 @@ div.data-table-header {
     margin-bottom: 0px;
 }
 
-/* Botón Refresh */
+/* BotÃ³n Refresh */
 .botonbusqueda {
     background-image: url(../img/refresh.png);
     background-repeat: no-repeat;
@@ -131,7 +131,7 @@ div.data-table-header {
     right: 10px;
 }
 
-/* Botón refresh Journal */
+/* BotÃ³n refresh Journal */
 .botonRefresh {
     display: block;
     width: 70px;
@@ -157,7 +157,7 @@ td.index-column {
 }
 
 /* Clases para el objeto DateTimePicker */
-/* Clases para centrar los signos más y menos de la hora del time */
+/* Clases para centrar los signos mÃ¡s y menos de la hora del time */
 div.time > div.hour span,
 div.time > div.minutes span {
     width: 100%;
@@ -243,9 +243,11 @@ table.table.table-condensed.table-bordered.data-table thead tr th {
 
 /* Reglas para la pantalla principal */
 .clsPantallaCompleta {
-	height: 95.5vh; 
-	max-width: 100%; 
-	width: 100%; 
+  /*
+	height: 95.5vh;
+	max-width: 100%;
+	width: 100%;
+	*/
 }
 
 /* Color de fondo en toda la pantalla */
@@ -253,7 +255,7 @@ body {
 	background-color: #FFFFFF;
 }
 
-/* Tama�o de la letra en toda la pagina*/
+/* Tamaño de la letra en toda la pagina*/
 *{
     font-size: 0.995em;
 }
@@ -278,7 +280,7 @@ body {
     text-align: center;
 }
 
-/*  Border de todo el margen del �rea del DataGrid */
+/*  Border de todo el margen del área del DataGrid */
 div.visible {
 	border: 2px solid #C0C0C0;
 }
@@ -295,10 +297,25 @@ div.visible {
 
 /* Color para marcar en el Journal el renglon de Consultas OK */
 .consultaOk{
-    background-color: #FFC90E;	
+    background-color: #FFC90E;
 }
 
-/* Color para marcar en el Journal el renglon de Errores de Comunicaci�n */
+/* Color para marcar en el Journal el renglon de Errores de Comunicación */
 .errorConex{
-    background-color: #F6464D;	
+    background-color: #F6464D;
+}
+
+/* Reglas de la barra del Sub Menús */
+.fijaSubMenu {
+  background: #F1EDED;
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  max-height: 2em;
+  min-height: 2em;
+  z-index: 999;
+  margin-top: 0.1em;
+  box-shadow: 0 3.5px 5px 0 rgba(0, 0, 0, 0.24);
 }

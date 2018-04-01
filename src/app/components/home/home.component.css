@@ -101,11 +101,11 @@ padding-left: 250px;
 /* Reglas de parte superior de la pantalla */
 .fijaEncabezado {
     background: #000000;
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
     left: 0;
     right: 0;
-    height: 6em;
+    height: 5em;
     min-height: 5em;
     max-height: 5em;
     z-index: 999;
@@ -114,10 +114,22 @@ padding-left: 250px;
 }
 
 
+#idHeaderPaginaX {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  max-height: 2em;
+  min-height: 2em;
+  z-index: 999;
+  margin-top: 0.1em;
+}
 /* Reglas de la barra del Sub Menús */
+/*
 .fijaSubMenu {
     background: #F1EDED;
-    position: fixed;
+    / *position: fixed;* /
     top: 0;
     left: 0;
     right: 0;
@@ -125,9 +137,10 @@ padding-left: 250px;
     max-height: 2em;
     min-height: 2em;
     z-index: 999;
-    margin-top: 5.1em;
+    margin-top: 0.1em;
     box-shadow: 0 3.5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+*/
 
 A:hover {
     text-decoration: none;
@@ -146,4 +159,47 @@ a {
 
 .mat-toolbar-row, .mat-toolbar-single-row {
     height: 12vh;
+}
+
+/*
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+*/
+
+
+/* Navigation link styles */
+mat-toolbar a {
+  padding: 1px 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+mat-toolbar a:visited, a:link {
+  color: #607D8B;
+}
+mat-toolbar a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+mat-toolbar a.active {
+  color: #039be5;
+}
+a {
+  cursor: pointer;
+  cursor: hand;
 }

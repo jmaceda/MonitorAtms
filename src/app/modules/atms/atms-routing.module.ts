@@ -7,7 +7,8 @@ import { JournalComponent }       from './../../components/atms/journal/journal.
 
 const routes: Routes = [
     {
-        path: 'atms', component: AtmsComponent, children: [
+        path: 'atms', component: AtmsComponent,
+          children: [
             { path: 'journal', component: JournalComponent },
         ]
     }
