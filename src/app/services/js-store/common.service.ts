@@ -84,12 +84,12 @@ export class CommonService {
     {
       Name: 'IsoAddress',
       NotNull: true,
-      DataType: JsStore.Data_Type.Number
+      DataType: JsStore.Data_Type.String
     },
     {
       Name: 'IsoLocation',
       NotNull: true,
-      DataType: JsStore.Data_Type.Number
+      DataType: JsStore.Data_Type.String
     },
     {
       Name: 'Model',
@@ -104,7 +104,7 @@ export class CommonService {
     {
       Name: 'OfflineDevices',
       NotNull: true,
-      DataType: JsStore.Data_Type.String
+      DataType: JsStore.Data_Type.Array
     },
     {
       Name: 'OnlineDevices',
@@ -124,7 +124,7 @@ export class CommonService {
     {
       Name: 'SerialNumber',
       NotNull: true,
-      DataType: JsStore.Data_Type.Number
+      DataType: JsStore.Data_Type.String
     },
     {
       Name: 'ServiceDate',
@@ -144,7 +144,7 @@ export class CommonService {
     {
       Name: 'LastDetails',
       NotNull: true,
-      DataType: JsStore.Data_Type.String
+      DataType: JsStore.Data_Type.Array
     },
     {
       Name: 'CassettesStatus',
@@ -164,7 +164,7 @@ export class CommonService {
     {
       Name: 'LastDetailsTimestamps',
       NotNull: true,
-      DataType: JsStore.Data_Type.String
+      DataType: JsStore.Data_Type.Array
     },
     {
       Name: 'CassettesStatusTimestamp',
@@ -259,7 +259,7 @@ export class CommonService {
     {
       Name: 'AddressNumber',
       NotNull: true,
-      DataType: JsStore.Data_Type.Number
+      DataType: JsStore.Data_Type.String
     },
     {
       Name: 'Latitude',

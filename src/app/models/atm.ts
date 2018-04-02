@@ -10,23 +10,23 @@ export class IAtm {
     Id: number;
     Ip: string;
     IsOnline: boolean;
-    IsoAddress: number;
-    IsoLocation: number;
+    IsoAddress: string;
+    IsoLocation: string;
     Model: string;
     Name: string;
-    OfflineDevices: string;
+    OfflineDevices: object;
     OnlineDevices: object;
     OperatingSystem: string;
     PaperStatus: string;
-    SerialNumber: number;
+    SerialNumber: string;
     ServiceDate: number;
     State: string;
     ZipCode: string ;
-    LastDetails: string;
+    LastDetails: object;
     CassettesStatus: string;
     HoppersStatus: string;
     IsInMaintenanceMode: boolean;
-    LastDetailsTimestamps: string;
+    LastDetailsTimestamps: object;
     CassettesStatusTimestamp: number;
     HoppersStatusTimestamp: number;
     MaintenanceModeTimestamp: number;
@@ -46,7 +46,7 @@ export class IAtm {
     WorkingDays: number;
     LastIOnlineTimestamp: number;
     AddressStreet: string;
-    AddressNumber: number;
+    AddressNumber: string;
     Latitude: number;
     Longitude: number;
     Locality: string;
@@ -67,24 +67,24 @@ export class Atm implements IAtm {
     HopperAmount: string = "";
     Id: number = 0;
     Ip: string = "";
-    IsOnline: boolean = true; /* Verificar tipo de dato, este es booleano */
-    IsoAddress: number = 0;
-    IsoLocation: number = 0;
+    IsOnline: boolean = true;
+    IsoAddress: string = "";
+    IsoLocation: string = "";
     Model: string = "";
     Name: string = "";
-    OfflineDevices: string = "";
+    OfflineDevices: object = [];
     OnlineDevices: object = [];   /* Este campo contiene un arreglo */
     OperatingSystem: string = "";
     PaperStatus: string = "";
-    SerialNumber: number = 0;
+    SerialNumber: string = "";
     ServiceDate: number = 0;
     State: string = "";
     ZipCode: string = "";
-    LastDetails: string = "";
+    LastDetails: object = [];
     CassettesStatus: string = "";    /* Este campo contiene un arreglo */
     HoppersStatus: string = "";    /* Este campo contiene un arreglo */
     IsInMaintenanceMode: boolean = true;	/* Verificar tipo de dato, este es booleano */
-    LastDetailsTimestamps: string = "";
+    LastDetailsTimestamps: object = [];
     CassettesStatusTimestamp: number = 0;
     HoppersStatusTimestamp: number = 0;
     MaintenanceModeTimestamp: number = 0;
@@ -104,7 +104,7 @@ export class Atm implements IAtm {
     WorkingDays: number = 0;
     LastIOnlineTimestamp: number = 0;
     AddressStreet: string = "";
-    AddressNumber: number = 0;
+    AddressNumber: string = "";
     Latitude: number = 0;
     Longitude: number = 0;
     Locality: string = "";

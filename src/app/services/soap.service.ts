@@ -47,7 +47,6 @@ export class SoapService {
         if (e == null || e.constructor.toString().indexOf("function Error()") != -1) {
           reject("Unable to contat the server: " + status);
         } else {
-          //console.log(e);
           resolve(e);
         }
       }

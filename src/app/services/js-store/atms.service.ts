@@ -12,13 +12,14 @@ export class AtmsService {
     this._connection = service._connection;
   }
 
+  /*
   getAtms() {
     // jsstore returns promise, when you dont specify OnSuccess
     return this._connection.select({
       From: 'Atm'
     });
   }
-
+*/
   addAtms(atm) {
     return this._connection.insert({
       Into: 'Atm',

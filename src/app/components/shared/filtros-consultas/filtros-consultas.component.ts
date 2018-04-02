@@ -17,12 +17,9 @@ import { SoapService }                      from '../../../services/soap.service
 
 import { InfoAtmsService }                  from '../../../services/info-atms.service';
 import {NgbModal, ModalDismissReasons}      from '@ng-bootstrap/ng-bootstrap';
-//mport { NgbdModalBasic }                   from '../../utils/modal-basic';
-//import { NgbdModalContent }                 from '../../utils/ngbd-modal-content';
-//import { BsModalComponent }                 from 'ng2-bs3-modal';
+
 import * as $ from 'jquery';
-//import 'bootstrap/dist/js/bootstrap.bundle.js';
-//import { AngularDateTimePickerModule }      from 'angular2-datetimepicker';
+
 
 
 export var datosATMs = [];

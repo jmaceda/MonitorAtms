@@ -41,10 +41,6 @@ export class InfoAtmsService implements OnInit {
         return(gDatosAtms);
     };
 
-  public fnc(datosAtms:any, status){
-    console.log("fnc:: -->" + JSON.stringify(datosAtms)+ "<--");
-  }
-
   public obtenGetAtmAsync(parametros?:any) {
 
     let parameters:any = parametros;
@@ -56,15 +52,15 @@ export class InfoAtmsService implements OnInit {
 
     this._soapService.post2db('', 'GetAtm', parameters)
       .then(result => {
-        //console.log("-->"+JSON.stringify(result)+"<--");
-        result.forEach( reg => {
-          this._atmsService.addAtms(reg);
-        });
+
+        for(let key in result){
+          this._atmsService.addAtms(result[key]);
+        }
 
       }).catch(error => {
       console.log(error);
     });
-    console.log(datosResult);
+
     return(datosResult);
   }
 
