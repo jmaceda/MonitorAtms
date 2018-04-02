@@ -120,7 +120,7 @@ export class InfoAtmsService implements OnInit {
         this._soapService.post('', 'GetGroupsWithAtms', '', this.GetGroupsWithAtms, false);
 
         let arrNomGrupos:any[] = [];
-
+console.log(JSON.stringify(gGrupos));
         gGrupos.forEach((reg)=> {
             arrNomGrupos.push( (reg.Description));
         });

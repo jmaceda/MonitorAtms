@@ -96,6 +96,7 @@ export class FiltrosConsultasComponent implements OnInit {
         } else if (this.ipATMs.length == 0) {
             this.contenidoCombo = "ATMs";
             this.ipATMs         = this.detalleAtmsService.obtenGetAtm();
+          this.gListaGpos     = this.detalleAtmsService.obtenGetGroups();
             this.contenidoLista = "Seleccione ATM";
         }
 
