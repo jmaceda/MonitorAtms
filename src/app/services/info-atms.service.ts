@@ -3,6 +3,7 @@
 import { Injectable }       from '@angular/core';
 import { OnInit }           from '@angular/core';
 import { SoapService }      from './soap.service';
+import { AtmsService }      from './js-store/atms.service';
 
 export var gDatosAtm:any = [];
 export var gDatosAtms:any = [];
@@ -13,7 +14,8 @@ var nomServicio = "InfoAtmsService";
 @Injectable()
 export class InfoAtmsService implements OnInit {
 
-    constructor(public _soapService: SoapService){
+    constructor(public _soapService: SoapService,
+                public _atmsService: AtmsService){
         console.log(nomServicio+".constructor:: init");
     }
 
@@ -39,9 +41,36 @@ export class InfoAtmsService implements OnInit {
         return(gDatosAtms);
     };
 
+  public fnc(datosAtms:any, status){
+    console.log("fnc:: -->" + JSON.stringify(datosAtms)+ "<--");
+  }
+
+  public obtenGetAtmAsync(parametros?:any) {
+
+    let parameters:any = parametros;
+    let datosResult:any;
+
+    if (parametros == null || parametros == undefined) {
+      parameters = { nemonico: -1, groupId: -1, brandId: -1, modelId: -1, osId: -1, stateId: -1, townId: -1, areaId: -1, zipCode: -1}
+    }
+
+    this._soapService.post2db('', 'GetAtm', parameters)
+      .then(result => {
+        //console.log("-->"+JSON.stringify(result)+"<--");
+        result.forEach( reg => {
+          this._atmsService.addAtms(reg);
+        });
+
+      }).catch(error => {
+      console.log(error);
+    });
+    console.log(datosResult);
+    return(datosResult);
+  }
+
     public obtenGetAtm(parametros?:any) {
 
-        console.log(nomServicio+".obtenGetAtm:: Se van a obtener los datos");
+        console.log(nomServicio+".obtenGetAtm:: Se van a obtener los datos de los ATMs");
         let parameters:any = parametros;
 
         if (parametros == null || parametros == undefined) {

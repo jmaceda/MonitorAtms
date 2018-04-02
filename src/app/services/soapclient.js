@@ -1,9 +1,9 @@
 /*****************************************************************************\
  Javascript "SOAP Client" library
- 
+
  @version: 2.4 - 2007.12.21
  @author: Matteo Casati - http://www.guru4.net/
- 
+
 \*****************************************************************************/
 
 
@@ -126,7 +126,7 @@ SOAPClient.username = null;
 SOAPClient.password = null;
 
 SOAPClient.invoke = function(url, method, parameters, async, callback) {
-    //console.log("async: [" + async + "]");
+    console.log("soapclient.js.SOAPClient:: async: [" + async + "]");
     //async = false;
     if (async)
         SOAPClient._loadWsdl(url, method, parameters, async, callback);

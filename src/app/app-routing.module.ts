@@ -10,9 +10,17 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports     : [RouterModule.forRoot(routes)],
-  exports     : [RouterModule],
-  providers   : [],
-  declarations: [PageNotFoundComponent]
+  imports     : [
+    RouterModule.forRoot(routes)
+  ],
+  exports     : [
+    RouterModule
+  ],
+  providers   : [
+
+  ],
+  declarations: [
+
+  ]
 })
 export class AppRoutingModule { }

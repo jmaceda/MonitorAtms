@@ -34,11 +34,11 @@ select#idComboAtmGpo {
 }
 
 .clsMatCard {
-    margin-top: 5vh;
+    margin-top: 2vh;
     max-height: 4em;
     height: 4em;
-    max-width: 100%;        
-    width: 100%; 
+    max-width: 100%;
+    width: 100%;
     vertical-align: middle;
     background-color: #dfdfdf;
     /*padding: 2px;*/
@@ -50,8 +50,8 @@ select#idComboAtmGpo {
     margin-top: 5vh;
     max-height: 10vh;
     height: 10vh;
-    max-width: 100%;        
-    width: 100%; 
+    max-width: 100%;
+    width: 100%;
     vertical-align: middle;
     background-color: #dfdfdf;
     /*padding: 2px;*/
@@ -67,4 +67,3 @@ select#idComboAtmGpo {
     display: table-cell;
     vertical-align: middle;
 }
-    

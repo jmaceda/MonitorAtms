@@ -1,3 +1,31 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+
+/* Navigation link styles */
+mat-toolbar a {
+  padding: 1px 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  /*margin-top: 10px;*/
+  display: inline-block;
+  background-color: #D2F2EA;
+  border-radius: 4px;
+}
+mat-toolbar a:visited, a:link {
+  color: #607D8B;
+}
+mat-toolbar a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+mat-toolbar a.active {
+  color: #039be5;
+}
+
+
+a {
+  cursor: pointer;
+  cursor: hand;
+}

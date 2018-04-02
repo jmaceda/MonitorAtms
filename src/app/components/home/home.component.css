@@ -63,16 +63,16 @@
 
 .attrIconoBarras {
     color: #FFFFFF;
-    width: 8;
-    height: 8;
+    width: 8px;
+    height: 8px;
 }
 
 .abreMenuVertical {
     padding-top: 250px;
     color: black;
     font-size: 24px;
-    width: 12;
-    height: 12;
+    width: 12px;
+    height: 12px;
 }
 
 .cierraMenuVertical {
@@ -82,8 +82,8 @@ padding-left: 250px;
 */
     color: black;
     font-size: 24px;
-    width: 12;
-    height: 12;
+    width: 12px;
+    height: 12px;
 }
 
 
@@ -189,8 +189,10 @@ mat-toolbar a {
   background-color: #eee;
   border-radius: 4px;
 }
-mat-toolbar a:visited, a:link {
-  color: #607D8B;
+mat-toolbar a:visited {
+  /*color: #607D8B;*/
+  color: #000000;
+  text-decoration: none
 }
 mat-toolbar a:hover {
   color: #039be5;

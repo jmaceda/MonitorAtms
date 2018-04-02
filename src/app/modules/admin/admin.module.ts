@@ -9,14 +9,14 @@ import { AdminComponent }           from '../../components/admin/admin.component
 @NgModule({
   imports: [
     CommonModule,
-	MatToolbarModule,
+	  MatToolbarModule,
     AdminRoutingModule
   ],
   declarations: [
-	AdminComponent
+	  AdminComponent
   ],
   exports: [
-	MatToolbarModule
+	  MatToolbarModule
   ]
 })
 export class AdminModule { }

@@ -12,14 +12,16 @@ import { MatIconModule } 			         from "@angular/material";
 import { MatSidenavModule } 		  	   from '@angular/material/sidenav';
 import { FlexLayoutModule } 		  	   from "@angular/flex-layout";
 
-
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { Instance }                     from 'JsStore';
+import { IDataBaseOption }              from 'JsStore';
+import { ITableOption }                 from 'JsStore';
+import { MDBBootstrapModule }           from 'angular-bootstrap-md';
 
 
 import { OwlDateTimeModule } 			      from 'ng-pick-datetime';
 import { OwlNativeDateTimeModule } 		  from 'ng-pick-datetime';
 import { NgxDatatableModule }           from '@swimlane/ngx-datatable';
-
+import { PageNotFoundComponent }        from './components/page-not-found/page-not-found.component';
 
 import { AppRoutingModule }             from './app-routing.module';
 import { InicioModule }                 from './modules/inicio/inicio.module';
@@ -30,15 +32,16 @@ import { SharedModule }                 from './modules/shared/shared.module';
 import { AppComponent }                 from './app.component';
 import { HomeComponent }                from './components/home/home.component';
 
-//import { FiltrosConsultasComponent }    from './shared/filtros-consultas/filtros-consultas.component';
+import { CommonService }                from './services/js-store/common.service';
 
 
+declare var JsStore;
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    //FiltrosConsultasComponent
+    PageNotFoundComponent,
   ],
 
   imports: [
@@ -57,15 +60,17 @@ import { HomeComponent }                from './components/home/home.component';
   	OwlNativeDateTimeModule,
 
     MDBBootstrapModule.forRoot(),
-	
+
     InicioModule,
     AdminModule,
     AtmsModule,
     SharedModule.forRoot(),
     AppRoutingModule,
+
+
   ],
   providers: [
-
+    CommonService,
   ],
   bootstrap: [
     AppComponent
@@ -76,7 +81,6 @@ import { HomeComponent }                from './components/home/home.component';
     NgxDatatableModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    //FiltrosConsultasComponent,
   ]
 })
 export class AppModule { }

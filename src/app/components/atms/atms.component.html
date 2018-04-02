@@ -1,27 +1,9 @@
 
 <mat-toolbar color="primary" class="fijaSubMenu">
-	<div fxShow="true" fxHide.lt-md="true">
+
 		<a [routerLink]="['/atms/journal']">Journal</a>
 		<a [routerLink]="['/atms/loghard']">Log Hardwaer</a>
-	</div>
+
 </mat-toolbar>
 
 <router-outlet></router-outlet>
-
-<!--
-<style>
-  .foo {
-    flex: 1 1 auto;
-    display: flex;
-    overflow: hidden;
-  }
-</style>
-<div fxFlexFill fxLayout="column">
-  <header>
-    <a [routerLink]="['/atms/journal']">Journal</a>
-    <a [routerLink]="['/atms/loghard']">Log Hardwaer</a>
-  </header>
-  <router-outlet class="foo"></router-outlet>
-  <footer>My footer</footer>
-</div>
--->

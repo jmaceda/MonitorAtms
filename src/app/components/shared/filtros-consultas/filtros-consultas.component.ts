@@ -12,7 +12,7 @@ import { MatCardModule }                    from '@angular/material/card';
 
 import { OwlDateTimeModule } 				        from 'ng-pick-datetime';
 import { OwlNativeDateTimeModule } 			    from 'ng-pick-datetime';
-import { sprintf }                          from "sprintf-js";
+//import { sprintf }                          from "sprintf-js";
 import { SoapService }                      from '../../../services/soap.service';
 
 import { InfoAtmsService }                  from '../../../services/info-atms.service';

@@ -5,21 +5,21 @@ import { TestBed }              from '@angular/core/testing';
 import { By }                   from '@angular/platform-browser';
 import { DebugElement }         from '@angular/core';
 
-import { AtmsComponent }        from './atms.component';
+import { AtmsInitComponent }        from './atms.component';
 
 describe('AtmsComponent', () => {
-  let component: AtmsComponent;
-  let fixture  : ComponentFixture<AtmsComponent>;
+  let component: AtmsInitComponent;
+  let fixture  : ComponentFixture<AtmsInitComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AtmsComponent ]
+      declarations: [ AtmsInitComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture   = TestBed.createComponent(AtmsComponent);
+    fixture   = TestBed.createComponent(AtmsInitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

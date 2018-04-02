@@ -7,9 +7,17 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-  providers: [],
-  declarations: [InicioComponent]
+  imports: [
+    RouterModule.forChild(routes)]
+  ,
+  exports: [
+    RouterModule
+  ],
+  providers: [
+
+  ],
+  declarations: [
+
+  ]
 })
 export class InicioRoutingModule { }

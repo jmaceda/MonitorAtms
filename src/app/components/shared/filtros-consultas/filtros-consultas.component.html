@@ -10,7 +10,7 @@
 
 <mat-card class="clsMatCard">
 
-	<mat-card-content style="padding: 2px; ">
+	<!-- mat-card-content style="padding: 2px; " -->
 
         <div class="row">
 
@@ -19,10 +19,10 @@
                 <input id="btnParams"
                        title="Modifica filtros para la consulta"
                        style="cursor: pointer; width: 100%; height: auto;"
-                       type=image   
+                       type=image
                        class="responsive"
 					   src="assets/img/../img/volume-synsizer-settings-icon.png"
-                       width="40" 
+                       width="40"
 					   height="40" (click)="pActualizaParams()">
             </div>
 
@@ -35,7 +35,7 @@
                     <div *ngIf="muestraDosFecha() == 'A'" id="idDivFechas1" style="vertical-align: middle;">
                         <div class="col-md-4">
 								<input id="idFchRangoIni"
-									[owlDateTime]="dt1" 
+									[owlDateTime]="dt1"
 									[owlDateTimeTrigger]="dt1" placeholder="Date Time">
 								<owl-date-time #dt1></owl-date-time>
 								<!--
@@ -49,7 +49,7 @@
                         <div class="col-md-4">
                             <div><br></div>
 							<input id="idFchRangoIni2"
-								[owlDateTime]="dt1" 
+								[owlDateTime]="dt1"
 								[owlDateTimeTrigger]="dt1" placeholder="Date Time">
 							<owl-date-time #dt1></owl-date-time>
 							<!--
@@ -64,8 +64,8 @@
 
                     <div id="idDivComboAtmGpo" class="col-md-4">
                         <span style="font-weight: bold;">{{contenidoCombo}}</span>
-                        <select id="idComboAtmGpo" type="string" 
-									[(ngModel)]="atmSeleccionado" 
+                        <select id="idComboAtmGpo" type="string"
+									[(ngModel)]="atmSeleccionado"
 									(ngModelChange)="pAtmSeleccionado($event)">
                             <option value="" disabled>{{contenidoLista}}</option>
                             <option *ngFor="let atm of ipATMs; let i = index" [ngValue]="atm">{{atm}}</option>
@@ -100,5 +100,5 @@
                            width="40" height="40" (click)="pActualizaInfo()">
             </div>
         </div>
-	</mat-card-content>
+	<!-- /mat-card-content -->
 </mat-card>

@@ -312,9 +312,9 @@ div.visible {
   top: 0;
   left: 0;
   right: 0;
-  height: 2em;
-  max-height: 2em;
-  min-height: 2em;
+  height: 2.5em;
+  max-height: 2.5em;
+  min-height: 2.5em;
   z-index: 999;
   margin-top: 0.1em;
   box-shadow: 0 3.5px 5px 0 rgba(0, 0, 0, 0.24);
