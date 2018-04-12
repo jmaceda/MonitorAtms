@@ -15,8 +15,7 @@ export class CommonService {
     JsStore.isDbExist(this._dbName as any).then(isExist => {
       if (isExist) {
         this._connection.openDb(this._dbName);
-      }
-      else {
+      } else {
         const DataBase = this.getDatabase();
         this._connection.createDb(DataBase);
       }

@@ -8,7 +8,7 @@
 
 #idDivImgActualiza,
 #idDivImgFiltros {
-    vertical-align: middle;
+    /*vertical-align: middle;*/
     text-align: center;
     font-weight: bold;
 }
@@ -34,14 +34,17 @@ select#idComboAtmGpo {
 }
 
 .clsMatCard {
-    margin-top: 2vh;
+    margin-top: .5em;
     max-height: 4em;
-    height: 4em;
+    height: 6em;
     max-width: 100%;
     width: 100%;
     vertical-align: middle;
     background-color: #dfdfdf;
-    /*padding: 2px;*/
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 3px;
+    padding-top: 3px;
     box-shadow: 0 3.5px 5px 0 rgba(0, 0, 0, 0.24);
     /*position: fixed;*/
 }
@@ -66,4 +69,30 @@ select#idComboAtmGpo {
 .hijo {
     display: table-cell;
     vertical-align: middle;
+}
+
+.responsive {
+  max-width: 40%;
+  height: auto;
+}
+
+#btnParams {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+#btnRefreshJournal {
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#idFchHraUltimaActual {
+  text-align: center;
+  height: 1.45em;
+  background-color: #FFFFFF;
+  border: .2px solid #AAAAAA;
 }

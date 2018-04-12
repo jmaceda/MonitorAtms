@@ -9,6 +9,8 @@ import { TemplateRef }                      from '@angular/core';
 import { NgForm } 							            from '@angular/forms';
 import { NgIf }                             from '@angular/common';
 import { MatCardModule }                    from '@angular/material/card';
+//import { MatSidenavModule } from '@angular/material';
+
 
 import { OwlDateTimeModule } 				        from 'ng-pick-datetime';
 import { OwlNativeDateTimeModule } 			    from 'ng-pick-datetime';
@@ -35,6 +37,13 @@ var nomModulo = "FiltrosConsultasComponent";
     providers  : [SoapService, InfoAtmsService],
 })
 export class FiltrosConsultasComponent implements OnInit {
+
+  tiles = [
+    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
+    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
 
     @Input() dUltimaActualizacion: any;  // Recibe la fecha y hora de la ultima actualización para mostrarla en "idFchHraUltimaActual"
     @Input() dListaAtmGpos       : any;     // Recibe la lista de ATMs o Grupos para ser mostrados en el combo "idComboAtmGpo".
@@ -75,9 +84,15 @@ export class FiltrosConsultasComponent implements OnInit {
                 //private modalService      : NgbModal
     }
 
+    public breakpoint:any;
+
+    onResize(event) {
+      //this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 6;
+    }
 
     public ngOnInit() {
         console.log(nomModulo + ".ngOnInit:: Inicio");
+        //this.breakpoint = (window.height <= 400) ? 1 : 6;
 
         this.inicilizaFechasFiltro();
 

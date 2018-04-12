@@ -8,10 +8,11 @@ import { MatToolbarModule } 		  	   from "@angular/material";
 import { MatCardModule } 				       from '@angular/material/card';
 //import { MatSidenavModule } 		    from "@angular/material";
 import { MatButtonModule } 			  	   from "@angular/material";
+//import { MaterialModule } from '@angular/material';
 import { MatIconModule } 			         from "@angular/material";
 import { MatSidenavModule } 		  	   from '@angular/material/sidenav';
 import { FlexLayoutModule } 		  	   from "@angular/flex-layout";
-
+import { MatGridListModule } from '@angular/material/grid-list';
 import { Instance }                     from 'JsStore';
 import { IDataBaseOption }              from 'JsStore';
 import { ITableOption }                 from 'JsStore';
@@ -54,19 +55,20 @@ declare var JsStore;
 	  MatCardModule,
     MatSidenavModule,
     MatButtonModule,
-    FlexLayoutModule,
     NgxDatatableModule,
   	OwlDateTimeModule,
   	OwlNativeDateTimeModule,
 
     MDBBootstrapModule.forRoot(),
+    //MaterialModule,
+    MatGridListModule,
+    FlexLayoutModule,
 
     InicioModule,
     AdminModule,
     AtmsModule,
     SharedModule.forRoot(),
     AppRoutingModule,
-
 
   ],
   providers: [
@@ -81,6 +83,8 @@ declare var JsStore;
     NgxDatatableModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    //MaterialModule,
+    MatGridListModule
   ]
 })
 export class AppModule { }
